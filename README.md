@@ -40,6 +40,37 @@ what you usually do with ```pip install pandas``` is now ```poetry add pandas```
 
 if you have to handle sensitive data put it in the ```.env ```file, it will be ignored by git and you can access it with ```os.getenv('VARIABLE_NAME')```
 
+### Required Environment Variables
+
+Create a `.env` file in the project root with:
+
+```
+OPENAI_API_KEY=your_openai_api_key_here
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+```
+
+To get a Telegram bot token:
+1. Message [@BotFather](https://t.me/botfather) on Telegram
+2. Send `/newbot` and follow the instructions
+3. Copy the token to your `.env` file
+
+## Running the Application
+
+### Terminal Chatbot (Console)
+```bash
+poetry run python main.py
+```
+
+### Telegram Bot Frontend
+```bash
+poetry run python run_telegram_bot.py
+```
+
+Or directly:
+```bash
+poetry run python -m src.telegram_bot
+```
+
 
 ## suggestion 
 open the folder with vscode and you should see 
